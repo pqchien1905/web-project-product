@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="assets/css/product.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/css/style.js"></script>
+    <title>Nike</title>
+</head>
+<body id="product">
+  <head>
+    <div class="head sp position-fixed f f1">
+      <div class="head-logo">
+        <a href="http://127.0.0.1:5500/index.html"><img src="assets/imgs/logo/jordan.png" class="logo" alt="jordan"></a>
+      </div>
+      <div class="sp">
+        <ul class="nav-list">
+          <li><a href="#">Find a Store</a></li>
+          <p>|</p>
+          <li><a href="#">Help</a></li>
+          <p>|</p>
+          <li><a href="#">Join Us</a></li>
+          <p>|</p>
+          <li><a href="http://127.0.0.1:5500/LOGIN.html#">Sign In</a></li>
+        </ul>
+      </div>
+    </div>
+    <div v class="head above bg-white sp position-fixed f f2">
+      <div class="head-logo">
+        <a href="http://127.0.0.1:5500/index.html"><img src="assets/imgs/logo/nike.png" class="logo" alt="jordan"></a>
+      </div>
+      <div class="sp" id="nav-cen" >
+        <ul class="nav-list">
+          <li><a href="http://127.0.0.1:5500/index.html">Home</a></li>
+          <li><a href="http://127.0.0.1:5500/Men.html">Men</a></li>
+          <li><a href="http://127.0.0.1:5500/Women.html">Women</a></li>
+          <li><a href="http://127.0.0.1:5500/index%20(2).html">Kids</a></li>
+          <li class="d-none d-xl-inline"><a href="#">Sale</a></li>
+      </div>
+      <div class="sp">
+        <div class="search sp d-none d-lg-flex">
+          <div class="logo">
+            <i class="fa-solid fa-magnifying-glass" style="cursor: pointer;"></i>
+          </div>
+          <input type="text" placeholder="Search">
+        </div>
+        <i class="fa-regular fa-heart" style="cursor: pointer;"></i>
+        <i class="fa-solid fa-store" style="cursor: pointer;"></i>
+        <i class="fa-solid fa-bars d-md-none" onclick="toggleMenu()" id="bar"></i>
+      </div>
+    </div>
+    <div id="nav-overlay" onclick="toggleMenu()"></div>
+    <div class="bg-white overflow-auto" id="nav">
+      <ul class="list-unstyled">
+        <i class="fa-solid fa-arrow-left" onclick="toggleMenu()"></i>
+        <li><a href="http://127.0.0.1:5500/index.html">Home</a></li>
+        <li><a href="http://127.0.0.1:5500/Men.html">Men</a></li>
+        <li><a href="http://127.0.0.1:5500/Women.html">Women</a></li>
+        <li><a href="http://127.0.0.1:5500/index%20(2).html">Kids</a></li>
+        <li><a href="#">Sale</a></li>
+        <li><a href="#">Find a Store</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Join Us</a></li>
+        <li><a href="http://127.0.0.1:5500/LOGIN.html#">Sign In</a></li>
+      </ul>
+    </div>
+  </head>
+      <div class="position-fixed d-flex buy d-md-none">
+        <button class="text-black bg-light p-3 border-0 w-50">Add to bag</button>
+        <button class="text-white bg-black p-3 border-0 w-50">Favourite</button>
+      </div>
+      <div class="product p-5">
+        <div class="row d-flex">
+            <div class="col-12 col-md-7 flex-md-row d-md-flex justify-content-end">
+                <div id="up" class="mt-0 d-md-none">
+                  <h3 id="it0"></h3>
+                  <h6 id="it1" class="mt-4"></h6>
+                  <h3 id="it2" class="my-4"></h3>
+                </div>
+                <div class="col-xl-2"></div>
+                <div class="d-flex col-md-2 flex-column mx-2">
+                    <img id="it3" onmouseover ="changeimg (this)" src="" alt="">
+                    <img id="it4" onmouseover ="changeimg (this)" src="" alt="">
+                    <img id="it5" onmouseover ="changeimg (this)" src="" alt="">
+                    <img id="it6" onmouseover ="changeimg (this)" src="" alt="">
+                    <img id="it7" onmouseover ="changeimg (this)" src="" alt="">
+                    <img id="it8" onmouseover ="changeimg (this)" src="" alt="">
+                    <img id="it9" onmouseover ="changeimg (this)" src="" alt="">
+                    <img id="it10" onmouseover ="changeimg (this)" src="" alt="">
+                    
+                </div>
+                <div id="main" class="col-md-10 col-xl-8 d-flex align-items-center justify-content-center overflow-hidden">
+                  <img id="main-img" src="" class="w-100 h-100" alt="">
+                </div>
+            </div>
+            <div class="col-12 col-md-5 overflow-auto row">
+                <div id="down" class="mt-0">
+                    <h3 id="it11"></h3>
+                    <h6 id="it12" class="mt-4"></h6>
+                    <h3 id="it13" class="mt-4"></h3>
+                </div>
+                <div class="mt-4 col-12 row scroll-bar">
+                  <p class="col-12">Select Size</p>
+                  <div class="row p-0 mx-0 text-center">
+                    <div class="col-12 row list-unstyled">
+                      <li class="col-4">
+                        <button onclick="changeboder(this)" class="p-2 bg-white rounded-3" value="35">35</button>
+                      </li>
+                      <li class="col-4">
+                        <button onclick="changeboder(this)" class="p-2 bg-white rounded-3" value="36">36</button>
+                      </li>
+                      <li class="col-4">
+                        <button onclick="changeboder(this)" class="p-2 bg-white rounded-3" value="37">37</button>
+                      </li>
+                      <li class="col-4">
+                        <button onclick="changeboder(this)" class="p-2 bg-white rounded-3" value="38">38</button>
+                      </li>
+                      <li class="col-4">
+                        <button onclick="changeboder(this)" class="p-2 bg-white rounded-3" value="39">39</button>
+                      </li>
+                      <li class="col-4">
+                        <button onclick="changeboder(this)" class="p-2 bg-white rounded-3" value="40">40</button>
+                      </li>
+                      <li class="col-4">
+                        <button onclick="changeboder(this)" class="p-2 bg-white rounded-3" value="41">41</button>
+                      </li>
+                      <li class="col-4">
+                        <button onclick="changeboder(this)" class="p-2 bg-white rounded-3" value="42">42</button>
+                      </li>
+                      <li class="col-4">
+                        <button onclick="changeboder(this)" class="p-2 bg-white rounded-3" value="43">43</button>
+                      </li>
+                      <li class="col-4">
+                        <button onclick="changeboder(this)" class="p-2 bg-white rounded-3" value="44">44</button>
+                      </li>
+                      <li class="col-4">
+                        <button onclick="changeboder(this)" class="p-2 bg-white rounded-3" value="45">45</button>
+                      </li>
+                      <li class="col-4">
+                        <button onclick="changeboder(this)" class="p-2 bg-white rounded-3" value="46">46</button>
+                      </li>
+                    </div>
+                    <button class="col-12 text-black p-3 rounded-5">Add to bag</button>
+                    <button class="col-12 text-white bg-black p-3 rounded-5 mb-4">Favourite</button>
+                    <h6>This product is excluded from site
+                      promotions and discounts.</h6>
+                    <p>With maximum cushioning to support every mile,
+                      the Invincible 3 is our highest level of comfort
+                      underfoot. Its plush and bouncy ZoomX foam
+                      helps you stay stable and fresh. In other words—
+                      it's going to feel good all day, whatever you're
+                      doing. And when you pair all this cushioning with
+                      easy-to-style colours, you get a shoe you never
+                      want to stop wearing.</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="mt-3 mt-sm-5">
+        <div class="sp fw-bold px-5">
+          <p>Featured</p>
+          <p>Shop</p>
+        </div>
+        <div class="row p-3 p-sm-5 fw-bold">
+          <div class="col-md-4 position-relative d-flex justify-content-center">
+            <img class="mb-5" src="assets/imgs/chi-tiet-san-pham/3/image 5.svg" alt="jordan">
+            <div class="first position-absolute">
+              <p class="text-white d-none d-sm-block"><small>Run Your Run<br><span class="d-inline d-md-none d-lg-inline">Find Your Next Runing Shoes</span></small></p>
+              <button class="border-0 bg-white px-3 py-1 py-sm-2 rounded-5 m-1"> Shop</button>
+            </div>
+          </div>
+          <div class="col-md-4 position-relative d-flex justify-content-center">
+              <img class="mb-5" src="assets/imgs/chi-tiet-san-pham/3/image 6.svg" alt="jordan">
+              <div class="first position-absolute">
+                <p class="text-white d-none d-sm-block"><small><span class="d-inline d-md-none d-lg-inline">Look Good. Feel Good.</span> Run Better<br><span class="d-inline d-md-none d-lg-inline">Shirts to keep You Frent</span></small></p>
+                <button class="border-0 bg-white px-3  py-1 py-sm-2 rounded-5 m-1"> Shop</button>
+              </div>
+          </div>
+          <div class="col-md-4 position-relative d-flex justify-content-center">
+              <img class="mb-md-5" src="assets/imgs/chi-tiet-san-pham/3/image 8.svg" alt="jordan">
+              <div class="first position-absolute">
+                <p class="text-white d-none d-sm-block"><small><span class="d-inline d-md-none d-lg-inline">Look Good. Feel Good.</span>Run Better<br><span class="d-inline d-md-none d-lg-inline">Short to Keep Your cool</span></small></p>
+                <button class="border-0 bg-white px-3  py-1 py-sm-2 rounded-5 m-1"> Shop</button>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-3 p-sm-5">
+        <div class="sp fw-bold">
+          <p>Treding</p>
+        </div>
+        <div>
+          <img class="w-100" src="assets/imgs/slider/slide-1.png" alt="">
+        </div>
+      </div>
+
+      <footer class="bg-black">
+        <div class="row pt-5 mx-5 px-">
+          <div class="col-md-3 col-xl-2 d-flex flex-column">
+            <a href="#" class="btn text-white"><small>FIND A STORE</small></a>
+            <a href="#" class="btn text-white"><small>BECOME A MEMBER</small></a>
+            <a href="#" class="btn text-white"><small>Send Us Feedback</small></a>
+          </div>
+          <div class="col-md-3 col-xl-2 d-flex flex-column">
+            <a href="#" class="btn text-white"><small>GET HELP</small></a>
+            <a href="#" class="btn d-none d-lg-block"><small>Order Status</small></a>
+            <a href="#" class="btn d-none d-lg-block"><small>Delivery</small></a>
+            <a href="#" class="btn d-none d-lg-block"><small>Returns</small></a>
+            <a href="#" class="btn d-none d-lg-block"><small>Payment Options</small></a>
+            <a href="#" class="btn d-none d-lg-block"><small>Contact Us</small></a>
+          </div>
+          <div class="col-md-3 col-xl-2 d-flex flex-column">
+            <a href="#" class="btn text-white"><small>ABOUT NIKE</small></a>
+            <a href="#" class="btn d-none d-lg-block"><small>News</small></a>
+            <a href="#" class="btn d-none d-lg-block"><small>Careers</small></a>
+            <a href="#" class="btn d-none d-lg-block"><small>Investors</small></a>
+            <a href="#" class="btn d-none d-lg-block"><small>Sustainability</small></a>
+          </div>
+          <div class="col-md-3 col-xl-6 fs-3">
+            <div class="float-md-end ">
+              <a class="fa-brands fa-twitter text-decoration-none"></a>
+              <a class="fa-brands fa-facebook text-decoration-none"></a>
+              <a class="fa-brands fa-youtube text-decoration-none"></a>
+              <a class="fa-brands fa-instagram text-decoration-none"></a>
+            </div>
+          </div>
+          <div class="mt-3 d-flex">
+            <i class="fa-solid fa-location-dot text-white" style="margin-top: 12px;"></i>
+            <p class="m-2 text-white">Vietnam</p>
+            <p class="m-2 d-none d-lg-block" style="color: #cccc;">© 2023 Nike, Inc. All Rights Reserved</p>
+          </div>
+        </div>
+      </footer>
+      <script>
+        const selectedProductValue = localStorage.getItem('selectedProduct');
+        if(selectedProductValue >= 3 && selectedProductValue <= 16) {
+          let j = selectedProductValue - 3;
+            for(let i = 0; i < 14; i++){
+              if(i >= 3 && i <= 10){
+                document.getElementById('it' + i).src = Women[j][i];
+              }else{
+                document.getElementById('it' + i ).innerHTML = Women[j][i];
+              }
+            }
+            document.getElementById('main-img').src = Women[j][3]
+          }else {
+            if(selectedProductValue <= 2){
+              for(let i = 0; i < 14; i++){
+                if(i >= 3 && i <= 10){
+                  document.getElementById('it' + i).src = Web[selectedProductValue][i];
+                }else{
+                  document.getElementById('it' + i ).innerHTML = Web[selectedProductValue][i];
+                }
+              }
+              document.getElementById('main-img').src = Web[selectedProductValue][3]
+            }else{
+              if(selectedProductValue < 31) {
+                let j = selectedProductValue - 17;
+                for(let i = 0; i < 14; i++){
+                  if(i >= 3 && i <= 10){
+                    document.getElementById('it' + i).src = Men[j][i];
+                  }else{
+                    document.getElementById('it' + i ).innerHTML = Men[j][i];
+                  }
+                }
+                document.getElementById('main-img').src = Men[j][3]
+              }else{
+                let j = selectedProductValue - 31;
+                for(let i = 0; i < 14; i++){
+                  if(i >= 3 && i <= 10){
+                    document.getElementById('it' + i).src = Kids[j][i];
+                  }else{
+                    document.getElementById('it' + i ).innerHTML = Kids[j][i];
+                  }
+                }
+                document.getElementById('main-img').src = Kids[j][3]
+              }
+              }
+
+            }
+      </script>
+</body>
+</html>
